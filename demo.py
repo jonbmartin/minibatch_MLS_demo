@@ -1,10 +1,7 @@
 import numpy as np
-import sigpy as sp
 import sigpy.mri.rf as rf
 import scipy.io as sio
 from algo import InterleavedShim
-import sigpy.plot as pl
-import util
 import matplotlib.pyplot as pyplot
 
 # Demo to test algorithm performance. Initialize with 10 random initializers,
@@ -20,7 +17,7 @@ test_slice = test_slice * mask_slice
 datasize = 80
 nSlices = 1
 
-nTrials = 20
+nTrials = 15
 nIter = 300
 beta = 1E-8 # small enough that RF power cost is not really a factor. Will see error reducing in batch cost.
 batchsize = 12 # number of rows used in inexact iterations; this is 1.5 x 8 channels (column dimension)
